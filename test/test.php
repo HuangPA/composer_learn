@@ -1,12 +1,22 @@
 <?php
-require_once '../vendor/autoload.php'; // 加载自动加载文件
+namespace Plant\Test;
 
-use Flower\Rose\Rose;
-use Flower\Lily\Lily;
+use Plant\Flower\Rose\Rose;
+use Plant\Flower\Lily\Lily;
+use Plant\Tree\Apple;
 
-$rose = new Rose();
-$lily = new Lily();
+class Test
+{
+    public function __construct()
+    {
+        $rose = new Rose();
+        $lily = new Lily();
 
-echo $rose->desc();
-echo "\n";
-echo $lily->desc();
+        echo $rose->desc();
+        echo "\n";
+        echo $lily->desc();
+
+        $apple = new Apple();
+        $apple->desc();
+    }
+}
